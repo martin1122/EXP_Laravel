@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class Employees extends Controller
 {
-    //123
+    $news = DB::table('main_news')->get();
+
+    return view('news.index', ['news' => $news]);
 }
