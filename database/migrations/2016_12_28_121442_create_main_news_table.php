@@ -15,13 +15,14 @@ class CreateMainNewsTable extends Migration
     {
        Schema::create('main_news', function (Blueprint $table) {
             $table->increments('postid')->unique();
+            $table->string('title')->nullable();
+            $table->longText('content')->nullable();
+            $table->string('catID')->nullable();
             $table->integer('hasCover')->nullable();
             $table->integer('hasHead')->nullable();
             $table->integer('replyCoount')->nullable();
             $table->integer('hasImg')->nullable();
             $table->string('docid')->nullable();
-            $table->string('title')->nullable();
-            $table->longText('content')->nullable();
             $table->integer('order')->nullable();
             $table->integer('priority')->nullable();
             $table->timestamps();

@@ -37,7 +37,6 @@ class CreateNewsTable extends Migration
             $table->string('cid');
             $table->integer('hasAD');
             $table->integer('imgextra');
-            $table->integer('skiptype');
             $table->string('source');
             $table->string('ename');
             $table->string('tname');
